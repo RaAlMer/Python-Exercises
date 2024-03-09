@@ -25,10 +25,10 @@ def enter_move(board):
     # The function takes the current state of the board and asks the user about their move,  
     # checks the input, and updates the board according to the user's decision.
     display_board(board)
-    movement = int(input('Input your movement: '))
+    movement = int(input('Input your move: '))
     if movement not in range(1, 10):
         print('Input a number between 1 and 9')
-        movement = int(input('Input your movement: '))
+        movement = int(input('Input your move: '))
     while divmod(movement - 1, 3) not in make_list_of_free_fields(board):
         print('That square is not empty')
         movement = int(input('Choose another one: '))
